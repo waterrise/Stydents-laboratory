@@ -1,0 +1,8 @@
+def generate_password(length = 8)
+  chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+'
+  password = ''
+  length.times { password << chars[rand(chars.size)] }
+  password
+end
+
+puts "Сгенерированный пароль: #{generate_password(12)}"
